@@ -1,12 +1,16 @@
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name= "StudentTable")
 public class Student {
     @Id
     int rollNo;
 
-    String name;
+    //@Transient
+    String gender;
+
+    @Column(name = "StudentName")
+    StudentName name;
 
     float marks;
 
@@ -18,11 +22,11 @@ public class Student {
         this.rollNo = rollNo;
     }
 
-    public String getName() {
+    public StudentName getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(StudentName name) {
         this.name = name;
     }
 
@@ -32,5 +36,13 @@ public class Student {
 
     public void setMarks(float marks) {
         this.marks = marks;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

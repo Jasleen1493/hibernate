@@ -18,3 +18,11 @@ Book : Spring Persistence with Hibernate - Packt publishing
   <li> @Transient - used for fields not to be saved in table</li>
   <li> @Embeddable - used for class to define embedded class, not an entity </li>
 </ul>
+
+<h4>Mappings</h4>
+<ul>
+  <li> @OneToOne</li>
+  <li> @OneToMany </li>
+  <li> @ManyToOne</li>
+  <li> @ManyToMany </li>
+</ul>

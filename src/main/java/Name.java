@@ -1,15 +1,15 @@
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class StudentName {
+public class Name {
     String firstName;
     String middleName;
     String lastName;
 
-    public StudentName() {
+    public Name() {
     }
 
-    public StudentName(String firstName, String middleName, String lastName) {
+    public Name(String firstName, String middleName, String lastName) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;

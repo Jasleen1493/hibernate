@@ -1,7 +1,7 @@
 import javax.persistence.*;
 
 @Entity
-@Table(name= "StudentTable")
+//@Table(name= "StudentTable")
 public class Student {
     @Id
     int rollNo;
@@ -10,7 +10,7 @@ public class Student {
     String gender;
 
     @Column(name = "StudentName")
-    StudentName name;
+    Name name;
 
     float marks;
 
@@ -22,11 +22,11 @@ public class Student {
         this.rollNo = rollNo;
     }
 
-    public StudentName getName() {
+    public Name getName() {
         return name;
     }
 
-    public void setName(StudentName name) {
+    public void setName(Name name) {
         this.name = name;
     }
 

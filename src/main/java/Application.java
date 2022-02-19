@@ -1,14 +1,12 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.BootstrapServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 
 public class Application {
 
     public static void main(String[] args) {
-        StudentName studentName = new StudentName("Ram","Mohan","Roy");
+        Name studentName = new Name("Ram","Mohan","Roy");
 
         Student student= new Student();
         student.setRollNo(1);
@@ -16,7 +14,7 @@ public class Application {
         student.setName(studentName);
         student.setMarks(81);
 
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class).addAnnotatedClass(Employee.class).addAnnotatedClass(Library.class).addAnnotatedClass(Book.class);
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
 

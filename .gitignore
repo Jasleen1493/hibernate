@@ -1,2 +1,5 @@
 # Ignore all idea(Intellij) files
 .idea/
+
+# Ignore all target files
+*target/**

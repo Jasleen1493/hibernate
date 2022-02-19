@@ -1,5 +1,6 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
@@ -7,11 +8,10 @@ public class Library {
 
     @Id
     private int id;
-    private String name;
-   /* private List<Book> books;
-    private List<Student> students;
-    private List<Employee> employees;
-*/
+
+    @OneToMany//(mappedBy = "library")
+    private List<Book> books;
+
     public int getId() {
         return id;
     }
@@ -20,12 +20,11 @@ public class Library {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public List<Book> getBooks() {
+        return books;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
-
 }

@@ -26,3 +26,10 @@ Book : Spring Persistence with Hibernate - Packt publishing
   <li> @ManyToOne</li>
   <li> @ManyToMany </li>
 </ul>
+
+Consider an example of a college having various departments (admin, library, branches(CSE,ECE, Mech, Civil)), with employees and students in each department.
+
+To begin with, building a library system, having multiple books and issuers, where issuer can be an employee(faculty) or a student.<br>
+1 Library > n books > n issuers<br>
+n books > 1 issuer<br>
+** Issuer - employee or student<br>

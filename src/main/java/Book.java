@@ -10,7 +10,7 @@ public class Book {
     private int id;
     private String bookName;
     private String authorName;
-    @OneToOne
+    @ManyToOne
     private Issuer issuer;
     @ManyToOne
     private Library library;
